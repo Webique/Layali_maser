@@ -16,7 +16,7 @@
             <div class="logo-section">
                 <img src="assets/logo.jpg" alt="Layali Maser Logo" class="logo">
             </div>
-
+    
             <!-- Navigation Menu -->
             <nav>
                 <ul class="nav-links">
@@ -24,8 +24,11 @@
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#hours">Opening Hours</a></li>
                     <li><a href="#location">Location</a></li>
+                    <li><a href="#gallery">Gallery</a></li> <!-- New Gallery Link -->
+                    <li><a href="#review">Leave a Review</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+    
                 <!-- Hamburger Menu -->
                 <div class="hamburger">
                     <span class="line"></span>
@@ -35,6 +38,8 @@
             </nav>
         </div>
     </header>
+    
+    
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -107,23 +112,57 @@
 
     <div class="section-divider"></div>
 
-    <!-- Location Section -->
-    <section class="location-section" id="location">
-        <div class="container">
-            <h2>Find Us</h2>
-            <p>
-                Layali Maser Café & Lounge is located in Jeddah, Saudi Arabia. Experience the heart of Egypt without leaving the city.
-            </p>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4685237260437!2d39.141323!3d21.559019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!5e0!3m2!1sen!2ssa!4v1693491234567!5m2!1sen!2ssa"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    class="google-map">
-                </iframe>
-            </div>
+<!-- Gallery Section -->
+<section class="gallery-section" id="gallery">
+    <div class="container">
+        <h2>Our Gallery</h2>
+        <p>Explore moments and experiences at Layali Maser Café & Lounge.</p>
+        <div class="gallery-slider">
+            <button class="nav-button left-button" onclick="prevImage()">&larr;</button>
+            <img id="gallery-image" src="assets/pic1.jpg" alt="Gallery Image 1" class="gallery-image">
+            <button class="nav-button right-button" onclick="nextImage()">&rarr;</button>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+    <div class="section-divider"></div>
+
+<!-- Location Section -->
+<section class="location-section" id="location">
+    <div class="container">
+        <h2>Find Us</h2>
+        <p>
+            Layali Maser is located in Jeddah, Saudi Arabia. Experience the heart of Egypt without leaving the city.
+        </p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3724.519935832546!2d39.141323!3d21.559019!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDMzJzMyLjUiTiAzOcKwMDgnMjcuMSJF!5e0!3m2!1sen!2ssa!4v1693491234567"
+                allowfullscreen=""
+                loading="lazy"
+                class="google-map">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<!-- Leave Us a Review Section -->
+<section class="review-section" id="review">
+    <div class="container">
+        <h2>Leave Us a Review</h2>
+        <p>We'd love to hear your feedback! Help us improve by leaving a review.</p>
+        <a href="https://www.google.com/search?client=safari&sa=X&sca_esv=c38d04ce4b5e8f56&channel=iphone_bm&cs=0&biw=414&bih=708&sxsrf=AHTn8zry515BE0rApuQDAdmvZ-OeyeZlKQ%3A1738163538705&kgmid=%2Fg%2F11vrmffh32&q=%D9%82%D9%87%D9%88%D8%A9%20%D9%84%D9%8A%D8%A7%D9%84%D9%8A%20%D9%85%D8%B5%D8%B1&shndl=30&source=sh%2Fx%2Floc%2Fact%2Fm4%2F3&zx=1738621664993&no_sw_cr=1#lrd=0x15c3db4da56df7a3:0x8359133a9d16f945,3,,,,"
+           target="_blank" class="review-button">
+            Leave a Review
+        </a>
+    </div>
+</section>
+
+
 
     <div class="section-divider"></div>
 

@@ -60,3 +60,59 @@ document.addEventListener('DOMContentLoaded', () => {
         slides.style.transform = `translateX(-${currentIndex * 100}%)`;
     }, 3000); // Change slide every 3 seconds
 });
+
+// JavaScript for slideshow gallery navigation
+const images = [
+    'assets/pic1.jpg', 'assets/pic2.jpg', 'assets/pic3.jpg',
+    'assets/pic4.jpg', 'assets/pic5.jpg', 'assets/pic6.jpg',
+    'assets/pic7.jpg', 'assets/pic8.jpg', 'assets/pic9.jpg',
+    'assets/pic10.jpg'
+];
+
+let currentImageIndex = 0;
+let slideshowInterval;
+
+// Update the displayed image
+function updateImage() {
+    const galleryImage = document.getElementById('gallery-image');
+    galleryImage.src = images[currentImageIndex];
+    galleryImage.alt = `Gallery Image ${currentImageIndex + 1}`;
+}
+
+// Move to the previous image
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage();
+}
+
+// Move to the next image
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImage();
+}
+
+// Start automatic slideshow
+function startSlideshow() {
+    slideshowInterval = setInterval(nextImage, 4000); // Change image every 4 seconds
+}
+
+// Stop the slideshow when the user interacts
+function stopSlideshow() {
+    clearInterval(slideshowInterval);
+}
+
+// Add event listeners for buttons to pause the slideshow
+document.querySelector('.left-button').addEventListener('click', () => {
+    stopSlideshow();
+    prevImage();
+    startSlideshow(); // Restart slideshow after interaction
+});
+
+document.querySelector('.right-button').addEventListener('click', () => {
+    stopSlideshow();
+    nextImage();
+    startSlideshow(); // Restart slideshow after interaction
+});
+
+// Start the slideshow on page load
+window.addEventListener('load', startSlideshow);
