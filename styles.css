@@ -572,7 +572,7 @@ footer .social-icons a:hover {
     background-color: var(--primary-red);
     color: var(--white);
     text-align: center;
-    border-radius: 20px;
+    border-radius: 0px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
