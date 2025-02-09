@@ -167,12 +167,6 @@ body {
     }
 }
 
-/* Section Divider */
-.section-divider {
-    height: 4px;
-    background-color: var(--primary-red);
-    margin: 2rem 0;
-}
 
 /* Hero Section */
 .hero-section {
@@ -269,6 +263,47 @@ footer .social-icons a {
 footer .social-icons a:hover {
     color: var(--accent-dark-red); /* Slightly darker red on hover */
 }
+/* Email Contact Item */
+.contact-item.email {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 10px;
+    font-family: 'Patrick Hand', cursive; /* Your font */
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparent background */
+    color: var(--neutral-light); /* Text color */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Email Link Style */
+.contact-item.email a {
+    text-decoration: none;
+    color: var(--neutral-light); /* Same color as the surrounding text */
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.contact-item.email:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+    background: rgba(255, 255, 255, 0.2); /* Slightly brighter background */
+}
+
+.contact-item.email a:hover {
+    color: var(--secondary-green); /* Green highlight on hover */
+}
+
 
 /* Who We Are Section */
 .who-we-are {
@@ -568,131 +603,191 @@ footer .social-icons a:hover {
 }
 /* Gallery Section */
 .gallery-section {
-    padding: 4rem 2rem;
     background-color: var(--primary-red);
     color: var(--white);
+    padding: 6rem 2rem;
     text-align: center;
-    border-radius: 0px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-section .container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.gallery-section h2 {
-    font-family: 'Baloo Bhaina 2', cursive;
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--white);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-section p {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    color: var(--neutral-light);
-}
-
-/* Slider */
-.gallery-slider {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    height: 80vh;
+    flex-direction: column;
 }
 
-.gallery-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    display: block;
+/* Container */
+.gallery-container {
+    max-width: 1200px;
+    width: 100%;
 }
 
-/* Navigation Buttons */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.2);
-    color: var(--white);
-    border: none;
-    font-size: 2rem;
+/* Section Heading */
+.gallery-container h2 {
+    font-family: 'Baloo Bhaina 2', cursive; /* Font: Baloo Bhaina */
+    font-size: 4rem; /* Font size for consistency */
     font-weight: bold;
-    padding: 0.8rem 1.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add subtle text shadow */
+}
+
+.gallery-container p {
+    font-family: 'Patrick Hand', cursive; /* Font: Patrick Hand */
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--neutral-light);
+    line-height: 1.8;
+}
+
+/* Gallery Toggle Button */
+.gallery-toggle-button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white); /* White text */
+    background-color: var(--dark-black); /* Black button background */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-    z-index: 10;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
-}
-
-.left-button {
-    left: 20px;
-}
-
-.right-button {
-    right: 20px;
+/* Hover Effect */
+.gallery-toggle-button:hover {
+    background-color: var(--accent-dark-red); /* Dark red on hover */
+    color: var(--white); /* Keep white text on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .gallery-slider {
-        height: 70vh;
-    }
-
-    .nav-button {
-        font-size: 1.8rem;
-    }
-}
-
 @media (max-width: 768px) {
-    .gallery-section h2 {
-        font-size: 3rem;
-    }
-
-    .gallery-section p {
-        font-size: 1.3rem;
-    }
-
-    .gallery-slider {
-        height: 60vh;
-    }
-
-    .nav-button {
-        font-size: 1.6rem;
-        padding: 0.5rem 1.2rem;
+    .gallery-toggle-button {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+        padding: 1rem 2rem;
     }
 }
 
-@media (max-width: 480px) {
-    .gallery-slider {
-        height: 50vh;
-    }
 
-    .gallery-section h2 {
-        font-size: 2.5rem;
-    }
 
-    .gallery-section p {
-        font-size: 1.2rem;
-    }
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
 
-    .nav-button {
-        font-size: 1.4rem;
-        padding: 0.5rem 1rem;
+/* Hide Gallery Grid on Mobile Initially */
+@media (max-width: 768px) {
+    .gallery-grid {
+        display: none;
+    }
+}
+
+/* Show Gallery When Button is Clicked */
+.gallery-grid.active {
+    display: grid;
+}
+
+/* Gallery Items */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Zoom Effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(255, 215, 0, 0.5); /* Gold Glow Effect */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Lightbox Image */
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(255, 215, 0, 0.5);
+    animation: scaleIn 0.3s ease-in-out;
+}
+
+/* Lightbox Close Button */
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Show Lightbox */
+.lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
     }
 }
 
@@ -925,16 +1020,58 @@ footer .social-icons a:hover {
     }
 }
 
-/* Section Divider */
-.section-divider {
-    height: 4px;
-    width: 60%;
-    margin: 2rem auto;
-    background: linear-gradient(to right, var(--primary-red), var(--accent-dark-red)); /* Updated gradient */
-    border-radius: 50px;
-    transition: transform 0.3s ease-in-out;
+/* Section Divider Wrapper */
+.section-divider-wrapper {
+    background-color: var(--primary-red); /* Background color for the section */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
 }
 
+/* Section Divider */
+.section-divider {
+    height: 4px; /* Increased height for the curvy effect */
+    width: 60%;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.8), 
+        rgba(200, 200, 200, 0.6) 50%, 
+        rgba(255, 255, 255, 0.8));
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+/* Curved wave effect */
+.section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, var(--white), transparent 70%);
+    opacity: 0.4;
+    transform: translateX(-50%) translateY(-50%);
+    animation: wave-animation 4s infinite linear;
+    pointer-events: none;
+}
+
+/* Hover Effect */
 .section-divider:hover {
     transform: scaleX(1.1);
+    background: linear-gradient(90deg, var(--secondary-green), var(--neutral-light));
+}
+
+.section-divider:hover::before {
+    opacity: 0.6;
+}
+
+/* Wave animation */
+@keyframes wave-animation {
+    from {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    to {
+        transform: translateX(0) translateY(-50%);
+    }
 }
