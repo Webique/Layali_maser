@@ -1075,3 +1075,41 @@ footer .social-icons a:hover {
         transform: translateX(0) translateY(-50%);
     }
 }
+/* Language Toggle Button */
+.language-toggle {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.language-button {
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.language-button:hover {
+    background-color: var(--accent-dark-red);
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .language-button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
